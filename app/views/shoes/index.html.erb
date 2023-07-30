@@ -1,0 +1,20 @@
+<h1> All Shoes </h1>
+
+<div class="container text-center">
+  <div class="row">
+
+    <% @shoes.each do |shoe| %>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="<%=shoe.images[0].url%>" width="300"/>
+          <div class="card-body">
+            <h5 class="card-title"><%=shoe.name%></h5>
+            <p class="card-title">Brand:<%=shoe.brand.name%></p>
+            <p class="card-title">Size:<%=shoe.size%></p>
+            <a href="#" class="btn btn-primary">Go somewhere </a>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
